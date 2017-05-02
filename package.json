@@ -1,0 +1,27 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "description": "The Official Website of Sigma Delta Alpha (Eta Chapter)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SigmaDeltaAlpha/website.git"
+  },
+  "keywords": [
+    "Sigma",
+    "Delta",
+    "Alpha",
+    "SDA",
+    "Eta",
+    "Frat"
+  ],
+  "author": "Juan G Ruelas Jr.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SigmaDeltaAlpha/website/issues"
+  },
+  "homepage": "https://github.com/SigmaDeltaAlpha/website#readme"
+}
