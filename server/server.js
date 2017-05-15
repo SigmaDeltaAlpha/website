@@ -16,9 +16,45 @@ app.use(morgan('dev'))
 app.set('view engine', 'ejs')
 app.set('views', __dirname + "/../client")
 
+/*LANDING PAGE*/
 app.get('/', function(req, res){
-	res.render('index')
+	if (req.isAuthenticated()){
+		// we render the web app for bros
+	}
+	res.render('views/index', {})
 })
+/*ABOUT PAGE*/
+app.get('/about', function(req, res){
+	res.render('views/about', {})
+})
+/*CONTACT PAGE*/
+app.get('/contact', function(req, res){
+	res.render('views/contact', {})
+})
+app.post('/contact', function(req, res){
+	// here we handle the contact request
+})
+/*BROTHERS PAGE*/
+app.get('/brothers', function(req, res){
+	res.render('views/brothers', {})
+})
+/*FOR RECRUITING NIGGAS*/
+app.get('/join', function(req, res){
+	res.render('views/join', {})
+})
+app.post('/join', function(req, res){
+	// here we save all the data that was sent to us and contact the potential
+	// interets later
+})
+
+
+/*THIS IS FOR THE HIDEDN/BROTHERS ONLY PART***/
+app.get('/login', function(req,res){
+
+})
+
+
+
 
 app.listen(port, function(err){
 	if (err){
