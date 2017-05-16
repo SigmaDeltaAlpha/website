@@ -8,10 +8,55 @@ main {
     flex: 1 0 auto;
 }
 
+@keyframes pulsed {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulsed {
+  animation-name: pulsed;
+}
+
 
 .active {
-  background: -webkit-linear-gradient(#440203 , #228B22); /* For Safari 5.1 to 6.0 */
-  /* background: -o-linear-gradient(#440203, #440100); /* For Opera 11.1 to 12.0 */
-  /* background: -moz-linear-gradient(#440203, #440205); /* For Firefox 3.6 to 15 */
-  /* background: linear-gradient(#440203 , #440205); /* Standard syntax */
+    background-color: #D3D3D3;
+}
+
+.maroon {
+    color: #440203;
+}
+
+.shadowfilter {
+    -webkit-filter: drop-shadow(0px 0px 8px rgb(128,0,0) );
+}
+
+.bg {
+    background-color: #440203;
+    padding-bottom: 1em;;
+}
+
+main {
+    color : white;
+    background : url(/assets/diagonal.png), #440203;
+    background-repeat: repeat;
+}
+
+.pulsate {
+    -webkit-animation-name: pulsate 2s infinite;
+    animation-name: pulsate 2s infinite;
+
+}
+@keyframes pulsate {
+   0% { transform: scale(1); }
+   50% { transform: scale(1.1); }
+   100% { transform: scale(1); }
 }

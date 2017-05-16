@@ -15,3 +15,8 @@ $(window).bind('scroll', function () {
         $('nav').removeClass('fixed');
     }
 });
+
+setInterval(function(){
+	$('#brother').removeClass('pulsed')
+	$('#brother').addClass('pulsed')
+},5000)
