@@ -94,6 +94,18 @@ app.get('/login', function(req,res){
 })
 
 
+/*this is for handling webhooks from anyone*/
+app.post('/webhooks/:id', function(req, res){
+	if (req.params.id == "typeform"){
+
+		res.json({
+			nice : 'nice'
+		})
+
+		console.log(req.body)
+
+	}
+})
 
 
 app.listen(port, function(err){
