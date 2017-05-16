@@ -27,6 +27,9 @@ var canvasDots = function() {
       ctx = canvas.getContext('2d'),
       colorDot = 'white',
       color = 'white';
+
+
+
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   canvas.style.display = 'block';
@@ -39,12 +42,25 @@ var canvasDots = function() {
     y: 30 * canvas.height / 100
   };
 
-  var dots = {
-    nb: 350,
-    distance: 60,
-    d_radius: 100,
-    array: []
-  };
+	var dots = {}
+
+	if (window.innerWidth <= 750){
+		dots = {
+		  nb: 50,
+		  distance: 60,
+		  d_radius: 100,
+		  array: []
+		};
+	}
+	else {
+		dots = {
+		  nb: 350,
+		  distance: 60,
+		  d_radius: 100,
+		  array: []
+		};
+	}
+
 
   function Dot(){
     this.x = Math.random() * canvas.width;
