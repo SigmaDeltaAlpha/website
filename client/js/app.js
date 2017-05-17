@@ -1,5 +1,5 @@
 // here we initialize all our material componetns
-
+var dotInterval = null;
 
 $(document).ready(function() {
 	// initalize the side-nav
@@ -16,10 +16,6 @@ $(window).bind('scroll', function () {
     }
 });
 
-setInterval(function(){
-	$('#brother').removeClass('pulsed')
-	$('#brother').addClass('pulsed')
-},5000)
 
 
 var canvasDots = function() {
@@ -138,9 +134,24 @@ var canvasDots = function() {
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;
 
-  setInterval(createDots, 1000/30);
+  dotInterval = setInterval(createDots, 1000/30);
 };
 
 window.onload = function() {
   canvasDots();
 };
+
+function resize() {
+
+	clearInterval(dotInterval)
+
+	var canvas = document.querySelector('canvas')
+    var ctx = canvas.getContext('2d')
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	canvasDots()
+}
+
+
+
+
+window.addEventListener("resize", resize)
