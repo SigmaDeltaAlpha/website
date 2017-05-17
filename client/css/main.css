@@ -159,3 +159,11 @@ canvas{
 .wrong #inputProgress {
   border-color: #ff2d26;
 }
+.section {
+    background: transparent;
+    position: absolute;
+}
+
+.fp-tableCell {
+    padding-bottom: 10px;
+}

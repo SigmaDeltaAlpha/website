@@ -4,6 +4,7 @@ var dotInterval = null;
 $(document).ready(function() {
 	// initalize the side-nav
 	$(".button-collapse").sideNav();
+	$('#fullpage').fullpage();
 })
 
  var num = 200; //number of pixels before modifying styles
@@ -150,8 +151,6 @@ function resize() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	canvasDots()
 }
-
-
 
 
 window.addEventListener("resize", resize)
