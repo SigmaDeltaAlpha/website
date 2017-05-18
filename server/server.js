@@ -7,7 +7,7 @@ let mongoose 		= require('mongoose')
 let passport 		= require('passport')
 
 let app 			= express()
-let port 			= process.env.PORT || 3000
+let port 			= process.env.PORT || 8091
 let url 			= require( __dirname + '/config.js').url
 
 
