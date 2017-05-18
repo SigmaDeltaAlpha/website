@@ -5,6 +5,7 @@ let bodyParser   	= require('body-parser');
 let session      	= require('express-session');
 let mongoose 		= require('mongoose')
 let passport 		= require('passport')
+let favicon 		= require('serve-favicon')
 
 let app 			= express()
 let port 			= process.env.PORT || 8091
@@ -16,6 +17,10 @@ app.use(express.static( __dirname + "/../client"));
 app.use(express.static( __dirname + "/../node_modules/uikit/dist/css"));
 app.use(express.static( __dirname + "/../node_modules/uikit/dist/js"));
 app.use(express.static( __dirname + "/../node_modules/jquery/dist"));
+
+// serve the favicon with every request
+app.use(favicon( __dirname + '/../client/assets/favicon.ico'))
+
 
 // middleware for handling sessions
 app.use(morgan('dev'))
