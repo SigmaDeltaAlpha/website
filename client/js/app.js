@@ -4,7 +4,6 @@ var dotInterval = null;
 $(document).ready(function() {
 	// initalize the side-nav
 	$(".button-collapse").sideNav();
-	$('#fullpage').fullpage();
 })
 
  var num = 200; //number of pixels before modifying styles
@@ -20,10 +19,15 @@ $(window).bind('scroll', function () {
 
 
 var canvasDots = function() {
-  var canvas = document.querySelector('canvas'),
-      ctx = canvas.getContext('2d'),
-      colorDot = 'white',
-      color = 'white';
+	var canvas = document.querySelector('canvas')
+	if (!canvas){
+		return
+	}
+	var ctx = canvas.getContext('2d')
+	var colorDot = 'white'
+	var color = 'white'
+
+
 
 
 
