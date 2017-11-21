@@ -38,6 +38,7 @@ app.use(session({
 })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
+
 // configure passport
 require( __dirname + '/config/passport')(passport)
 
@@ -101,6 +102,7 @@ app.get('/login', function(req,res){
 	}
 	res.render('views/login', {})
 })
+
 app.post('/login', function(req, res, next){
 	if(req.isAuthenticated()){
 		return res.redirect('/') // is alredy logged in
